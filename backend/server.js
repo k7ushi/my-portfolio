@@ -19,4 +19,6 @@ mongoose.connect(process.env.MONGO_URL)
 app.use('/api/blogs', blogRoutes);
 
 // Start Server
-app.listen(5000, () => console.log('Server started on http://localhost:5000'));
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server started on port ${process.env.PORT || 5000}`);
+});

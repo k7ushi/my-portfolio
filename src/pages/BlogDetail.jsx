@@ -9,7 +9,7 @@ const BlogDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/blogs/${id}`)
+      .get(`https://my-portfolio-lznq.onrender.com/api/blogs/${id}`)
       .then((res) => setBlog(res.data))
       .catch((err) => console.error(err));
   }, [id]);

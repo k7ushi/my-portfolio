@@ -7,7 +7,7 @@ const Blog = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/blogs")
+      .get("https://my-portfolio-lznq.onrender.com/api/blogs")
       .then((res) => {
         console.log("Fetched Blogs:", res.data);
         setBlogs(res.data);

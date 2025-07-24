@@ -39,7 +39,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/blogs")
+      .get("https://my-portfolio-lznq.onrender.com/api/blogs")
       .then((res) => setBlogs(res.data))
       .catch((err) => console.error(err));
   }, []);
