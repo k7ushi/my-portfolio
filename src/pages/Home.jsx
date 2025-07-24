@@ -47,98 +47,113 @@ const Home = () => {
   return (
     <section className="min-h-screen bg-white text-black font-sans px-4 sm:px-6 md:px-20 pb-20">
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between relative z-10 gap-10 mb-16">
-        {/* Left Text Section */}
-        <div className="md:w-1/2 w-full text-center md:text-left">
-          <h1 className="text-[12vw] md:text-[7vw] font-bold leading-none whitespace-nowrap">
-            Hi, <br /> I'm Khushi <span className="relative z-20">Anand</span>
-          </h1>
-          <p className="mt-6 ml-5 text-2xl sm:text-2xl md:text-4xl">
-            <Typewriter
-              options={{
-                strings: [
-                  'Full Stack Developer',
-                  'Digital Marketing Strategist',
-                  'Writer at heart...',
-                ],
-                autoStart: true,
-                loop: true,
-                wrapperClassName: 'font-semibold',
-                cursorClassName: 'animate-blink',
-              }}
-            />
-            <br></br>I live <span className="line-through">at the computer</span><br />
-            in New Delhi, India
-          </p>
-        </div>
+<div className="flex flex-col md:flex-row items-center justify-between relative z-10 gap-10 mb-16">
+  {/* Left Text Section */}
+  <div className="md:w-1/2 w-full text-center md:text-left">
+    <h1 className="text-[12vw] md:text-[7vw] lg:text-[5vw] font-bold leading-none whitespace-nowrap">
+      Hi, <br /> I'm Khushi <span className="relative z-20">Anand</span>
+    </h1>
+    <p className="mt-6 ml-5 text-xl sm:text-2xl md:text-4xl">
+      <Typewriter
+        options={{
+          strings: [
+            'Full Stack Developer',
+            'Digital Marketing Strategist',
+            'Writer at heart...',
+          ],
+          autoStart: true,
+          loop: true,
+          wrapperClassName: 'font-semibold',
+          cursorClassName: 'animate-blink',
+        }}
+      />
+      <br />
+      I live <span className="line-through">at the computer</span>
+      <br />
+      in New Delhi, India
+    </p>
+  </div>
 
-        {/* Right Image Section */}
-        <div className="relative md:w-1/2 w-full flex justify-center md:justify-end">
-          <div className="relative">
-            <img src={profileImg} alt="Khushi Anand" className="rounded-2xl max-w-[250px] sm:max-w-xs md:max-w-md"/>
-            <img src={logoOverlay} alt="Logo Overlay" className="absolute top-2 left-2 w-10 h-10 sm:w-12 sm:h-12 rounded-md"/>
-          </div>
-        </div>
-      </div>
-
-      <div className="relative">
-  <div className="absolute top-0 left-0 mt-10 ml-10 z-10">
-{/* left twitter card */}
-      <div className="mt-10 rounded-2xl p-6 max-w-sm text-gray bg-[rgba(0,179,230,0.12)] backdrop-blur-lg">
-  <div className="flex items-center gap-4 mb-3">
-    <img
-      src={roundprofile}
-      alt="Khushi Anand"
-      className="w-14 h-14 rounded-full object-cover"
-    />
-    <div>
-      <p className="text-base font-bold text-gray">khushi anand</p>
-      <p className="text-base text-gray">18:02 wednesday</p>
+  {/* Right Image Section */}
+  <div className="relative md:w-1/2 w-full flex justify-center md:justify-end">
+    <div className="relative">
+      <img src={profileImg} alt="Khushi Anand" className="rounded-2xl w-[250px] sm:w-[300px] md:w-[400px]" />
+      <img src={logoOverlay} alt="Logo Overlay" className="absolute top-8 -left-10 w-24 h-24 sm:w-20 sm:h-20" />
     </div>
   </div>
-  <p className="text-base text-gray leading-relaxed">
-    i once cried over a broken api call at 3am<br />
-    and then fixed it like a queen 5 mins later.<br />
-    emotional damage? debugged.
+</div>
+
+<div className="relative">
+  <div className="hidden sm:block absolute top-0 -left-10 mt-10 ml-4 sm:ml-10 z-10">
+    {/* Twitter-style Card */}
+    <div className="mt-10 rounded-2xl p-4 sm:p-6 max-w-[90vw] sm:max-w-sm text-gray bg-[rgba(0,179,230,0.12)] backdrop-blur-lg">
+      <div className="flex items-center gap-4 mb-3">
+        <img
+          src={roundprofile}
+          alt="Khushi Anand"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
+        />
+        <div>
+          <p className="text-base font-bold text-gray">khushi anand</p>
+          <p className="text-sm sm:text-base text-gray">18:02 wednesday</p>
+        </div>
+      </div>
+      <p className="text-sm sm:text-base text-gray leading-relaxed">
+        i once cried over a broken api call at 3am<br />
+        and then fixed it like a queen 5 mins later.<br />
+        emotional damage? debugged.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+{/* Text Content */}
+<div className="text-right max-w-4xl ml-auto text-lg sm:text-xl md:text-2xl leading-relaxed space-y-6 px-4 sm:px-6">
+  <p>
+    Full Stack Web Developer <span className="bg-[#c2b5e2] rounded-md px-1">(MERN)</span><br />
+    with a <span className="bg-yellow-300 rounded-md px-1">background in English Literature</span> and a passion for building{" "}
+    <br />
+    beautiful, intuitive, and high-impact digital experiences.
+  </p>
+
+  <p>
+    I didn’t come from tech, <span className="bg-[#e36a4e] rounded-md px-1">I built my own path into it.</span> Went from
+    <br />
+    <span className="bg-[#c2b5e2] rounded-md px-1">dissecting poetry to crafting code</span> that tells stories through interfaces. What
+    <br />
+    started as late-night <span className="bg-yellow-300 rounded-md px-1">curiosity turned into building full-stack applications</span>
+    <br />
+    using the MERN stack currently (MongoDB, Express.js, React.js, Node.js).
+  </p>
+
+  <p>
+    <span className="bg-yellow-300 rounded-md px-1">Front-end</span> is my strong suit. I'm obsessed with clean UI, seamless UX,
+    <br />
+    <span className="bg-[#c2b5e2] rounded-md px-1">responsive layouts, and animations</span> that just feel right. I started by customizing
+    <br />
+    <span className="bg-[#e36a4e] rounded-md px-1">CMS templates with CSS and JavaScript</span>, that’s when I knew coding clicked.
+  </p>
+
+  <p>
+    I’m also a certified <span className="bg-[#c2b5e2] rounded-md px-1">Digital Marketing Strategist</span> with real-world experience
+    <br />
+    in <span className="bg-yellow-300 rounded-md px-1">Meta Ads, Email Marketing, and Google Analytics, SEO</span>, so I understand
+    <br />
+    the product and the performance side of tech. I believe good code is like
+    <br />
+    good writing: clean, expressive, and meant to connect.
+  </p>
+
+  <p>
+    Currently pursuing my <span className="bg-[#e36a4e] rounded-md px-1">MCA at Amity University (Delhi NCR)</span>,
+    <br />
+    while gaining real world project experience on the side.
+    <br />
+    Hands-on learning over textbooks, always!
   </p>
 </div>
-</div>
-</div>
 
-      {/* Text Content */}
-      <div className="text-right max-w-4xl ml-auto text-2xl leading-relaxed space-y-6">
-        <p>
-          Full Stack Web Developer <span className="bg-[#c2b5e2] rounded-md px-1">(MERN)</span><br />
-          with a <span className="bg-yellow-300 rounded-md px-1">background in English Literature</span> and a passion for building{" "}<br />
-          beautiful, intuitive, and high-impact digital experiences.
-        </p>
-
-        <p>
-          I didn’t come from tech, <span className="bg-[#e36a4e] rounded-md px-1">I built my own path into it.</span> Went from<br />
-          <span className="bg-[#c2b5e2] rounded-md px-1">dissecting poetry to crafting code</span> that tells stories through interfaces. What<br />
-          started as late-night <span className="bg-yellow-300 rounded-md px-1">curiosity turned into building full-stack applications</span><br />
-          using the MERN stack currently (MongoDB, Express.js, React.js, Node.js).
-        </p>
-
-        <p>
-          <span className="bg-yellow-300 rounded-md px-1">Front-end</span> is my strong suit. I'm obsessed with clean UI, seamless UX,<br />
-          <span className="bg-[#c2b5e2] rounded-md px-1">responsive layouts, and animations</span> that just feel right. I started by customizing<br />
-          <span className="bg-[#e36a4e] rounded-md px-1">CMS templates with CSS and JavaScript</span>, that’s when I knew coding clicked.
-        </p>
-
-        <p>
-          I’m also a certified <span className="bg-[#c2b5e2] rounded-md px-1">Digital Marketing Strategist</span> with real-world experience<br />
-          in <span className="bg-yellow-300 rounded-md px-1">Meta Ads, Email Marketing, and Google Analytics, SEO</span>, so I understand both<br />
-          the product and the performance side of digital. I believe good code is like<br />
-          good writing: clean, expressive, and meant to connect.
-        </p>
-
-        <p>
-          Currently pursuing my <span className="bg-[#e36a4e] rounded-md px-1">MCA at Amity University (Delhi NCR)</span>,<br />
-          while gaining real world project experience on the side.<br />
-          Hands-on learning over textbooks, always!
-        </p>
-      </div>
 
 
 
@@ -354,7 +369,14 @@ const Home = () => {
 
   <h2 className="text-5xl font-bold pl-20 text-left mb-12">PORTFOLIO</h2>
   
+
+
   <div className="md:flex md:items-start md:justify-between gap-8">
+
+ 
+  {/* Paste your exact block here — untouched */}
+
+
     {/* Left - About */}
     <div className="text-left px-4 max-w-4xl text-2xl leading-relaxed space-y-6">
       <p>I’ve been <span className="bg-[#c2b5e2] rounded-md px-1">building, learning, & delivering work</span> for years now,<br />
@@ -365,18 +387,22 @@ const Home = () => {
       <p>From <span className="bg-[#e36a4e] rounded-md px-1">front-end finesse to back-end logic,</span><br />
       I know what it takes to ship <span className="bg-[#c2b5e2] rounded-md px-1">solid, scalable, and meaningful work.</span></p>
 
-      <p>I’m nothing in my soul if not committed. I take full ownership of my tasks,<br />
-      manage timelines, and communicate clearly throughout. If there’s something<br />
-      I don’t know (been in the game long enough to know it happens often in tech),<br />
-      I adapt fast. <span className="bg-yellow-300 rounded-md px-1">I ask around, I search, I experiment, and</span> <span className="bg-[#e36a4e] rounded-md px-1">I always deliver.</span><br />
-      <span className="bg-[#e36a4e] rounded-md px-1">No hand-holding.</span> <span className="bg-[#c2b5e2] rounded-md px-1">No delays.</span> <span className="bg-yellow-300 rounded-md px-1">Just results.</span></p>
+      <p>I’m nothing in my soul if not committed. I take full ownership<br />
+      of my tasks, manage timelines, and communicate clearly throughout.<br />
+      If there’s something I don’t know (been in the game long enough to<br />
+      know it happens often in tech), I adapt fast.<br />
+      <span className="bg-yellow-300 rounded-md px-1">I ask around, I search, I experiment, and </span><br />
+      <span className="bg-[#e36a4e] rounded-md px-1">I always deliver.</span> <span className="bg-[#e36a4e] rounded-md px-1">No hand-holding.</span> <span className="bg-[#c2b5e2] rounded-md px-1">No delays.</span> <span className="bg-yellow-300 rounded-md px-1">Just results.</span></p>
 
       <p>Every project I take on gets my full commitment. Whether solo or<br />
       in a team, I hold myself accountable and make sure the outcome isn’t<br />
-      just what’s expected, but better. <span className="bg-[#c2b5e2] rounded-md px-1">If you're looking for someone reliable,</span><br />
-      growth-driven, and genuinely invested in building things that work,<br />
-      I’m your dev. <span className="bg-[#e36a4e] rounded-md px-1">Let’s build something exceptional.</span></p>
+      just what’s expected, but better. If you're looking for someone<br />
+      <span className="bg-[#c2b5e2] rounded-md px-1">reliable, growth-driven,</span> and genuinely invested in building<br />
+       things that work, I’m your dev. <br />
+       <span className="bg-[#e36a4e] rounded-md px-1">Let’s build something exceptional.</span></p>
     </div>
+
+
 
     {/* Right - Card */}
     <div className="mt-10 rounded-2xl p-6 max-w-sm text-gray bg-[rgba(0,179,230,0.12)] backdrop-blur-lg">
@@ -421,27 +447,28 @@ const Home = () => {
     </div>
 
     {/* Resume Button */}
-    <div className=" pt-4">
-      <a
-        href="/khushi-resume.pdf"
-        download
-        className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors duration-200"
-      >
-        Download my resume
-      </a>
-    </div>
+    <div className="w-full pt-4 flex justify-start">
+  <a
+    href="/Khushi-Anand-Resume.pdf"
+    download
+    className="bg-black text-white text-sm sm:text-base px-6 sm:px-8 py-2 sm:py-3 rounded-md hover:bg-gray-800 transition-colors duration-200"
+  >
+    Download my resume
+  </a>
+</div>
+
   </div>
 
 
   {/* Right Grid */}
-  <div className="md:w-1/2">
+  <div className="hidden md:block md:w-1/2">
 
 {/* Toolkit */}
 <div className="-mt-20 text-right">
   <h3 className="text-3xl pr-20 font-bold mb-10">Toolkit</h3>
 
   {/* Row 1 – 3 icons */}
-  <div className="flex justify-end gap-6 mb-6 ml-16">
+  <div className="flex flex-wrap justify-center md:justify-end gap-6 mb-6">
     {/* HTML */}
     <div className="group relative cursor-pointer transition-transform duration-300 hover:scale-150 w-24 h-24">
       <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
@@ -468,7 +495,7 @@ const Home = () => {
   </div>
 
   {/* Row 2 – 4 icons */}
-  <div className="flex justify-end gap-6 mb-6">
+  <div className="flex flex-wrap justify-center md:justify-end gap-6 mb-6">
     {/* MongoDB */}
     <div className="group relative cursor-pointer transition-transform duration-300 hover:scale-150 w-24 h-24">
       <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
@@ -503,7 +530,7 @@ const Home = () => {
   </div>
 
   {/* Row 3 – 4 icons */}
-  <div className="flex justify-end gap-6 mb-6">
+  <div className="flex flex-wrap justify-center md:justify-end gap-6 mb-6">
     {/* Tailwind */}
     <div className="group relative cursor-pointer transition-transform duration-300 hover:scale-150 w-24 h-24">
       <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
@@ -538,7 +565,7 @@ const Home = () => {
   </div>
 
   {/* Row 4 – 3 icons */}
-  <div className="flex justify-end gap-6 ml-16">
+  <div className="flex flex-wrap justify-center md:justify-end gap-6 mb-6">
     {/* Vite */}
     <div className="group relative cursor-pointer transition-transform duration-300 hover:scale-150 w-24 h-24">
       <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
@@ -566,6 +593,41 @@ const Home = () => {
 </div>
 
   </div>
+
+<div className="block md:hidden">
+  <h3 className="text-2xl font-bold mb-6 text-center">Toolkit</h3>
+  <div className="grid grid-cols-3 gap-4 justify-items-center">
+    {[
+      { src: html, label: "HTML" },
+      { src: css, label: "CSS" },
+      { src: javascript, label: "JavaScript" },
+      { src: mongodb, label: "MongoDB" },
+      { src: express, label: "Express" },
+      { src: react, label: "React" },
+      { src: node, label: "Node.js" },
+      { src: tailwind, label: "Tailwind" },
+      { src: bootstrap, label: "Bootstrap" },
+      { src: postman, label: "Postman" },
+      { src: github, label: "GitHub" },
+      { src: vite, label: "Vite" },
+      { src: photoshop, label: "Photoshop" },
+      { src: canva, label: "Canva" },
+    ].map((tool, index) => (
+      <div key={index} className="group relative cursor-pointer transition-transform duration-300 hover:scale-110 w-20 h-20">
+        <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
+          <img
+            src={tool.src}
+            alt={tool.label}
+            className="w-12 h-12 object-contain group-hover:opacity-0 transition-opacity duration-200"
+          />
+          <span className="absolute text-sm text-teal-700 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            {tool.label}
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
 
 </div>

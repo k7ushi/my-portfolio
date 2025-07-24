@@ -1,5 +1,5 @@
 import React from "react";
-import resumeImage from "../assets/khushi-anand-resume.jpg"; 
+import resumeImage from "../assets/khushi-anand-resume.jpg";
 
 import html from "../assets/html.jpg";
 import css from "../assets/css.jpg";
@@ -20,11 +20,13 @@ import { FaArrowDown } from "react-icons/fa";
 
 export default function HireMe() {
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-start justify-between px-6 md:px-20 py-16 bg-white text-black font-sans">
+    <section className="min-h-screen flex flex-col lg:flex-row items-start justify-between px-4 sm:px-6 md:px-12 lg:px-20 py-10 sm:py-16 bg-white text-black font-sans space-y-16 lg:space-y-0 lg:space-x-12">
+      
       {/* Left Text Content */}
-      <div className="md:w-[60%] space-y-6 text-left text-2xl leading-relaxed">
-        <h2 className="text-2xl font-bold uppercase">
-          Frontend. Backend. All the stack. All the sass.<br />
+      <div className="w-full lg:w-[60%] space-y-6 text-left text-2xl sm:text-lg md:text-xl leading-relaxed">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase">
+          Frontend. Backend. All the stack. All the sass.
+          <br />
           Based in India, working worldwide.
         </h2>
 
@@ -54,55 +56,59 @@ export default function HireMe() {
         </p>
 
         <p>
-          I'm open to work currently,<br />
-          freelance gigs, internships, part-time opportunities,<br />
+          I'm open to work currently,
+          <br />
+          freelance gigs, internships, part-time opportunities,
+          <br />
           remote/cross-timezone, full-time position.
         </p>
 
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold">• Full Stack (MERN, Frontend + Backend)</h3>
-          <h3 className="text-2xl font-bold">• Custom CMS & dashboard tools</h3>
-          <h3 className="text-2xl font-bold">• Project bug fixing & optimization</h3>
-          <h3 className="text-2xl font-bold">• Shopify + WooCommerce Websites</h3>
-          <h3 className="text-2xl font-bold">• Figma to code conversions</h3>
-          <h3 className="text-2xl font-bold">• Advanced Digital Marketing</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">• Full Stack (MERN, Frontend + Backend)</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">• Custom CMS & dashboard tools</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">• Project bug fixing & optimization</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">• Shopify + WooCommerce Websites</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">• Figma to code conversions</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">• Advanced Digital Marketing</h3>
         </div>
       </div>
 
-      {/* Right Side – Resume + Toolkit stacked vertically */}
-      <div className="md:w-[38%] md:ml-10 flex flex-col items-center justify-start mt-20 md:mt-20">
+      {/* Right Side – Resume + Toolkit */}
+      <div className="w-full lg:w-[38%] flex flex-col items-center justify-start space-y-10">
         {/* Resume Section */}
         <img
           src={resumeImage}
           alt="Resume preview"
-          className="w-40 md:w-64 object-contain border rounded-md mb-4"
+          className="w-32 sm:w-40 md:w-56 object-contain border rounded-md"
         />
         <a
           href="/Khushi-Anand-Resume.pdf"
           download
-          className="bg-black text-white px-20 py-3 rounded-md -mt-2 mb-10 flex items-center gap-2 text-lg hover:scale-105 transition-transform duration-300"
+          className="bg-black text-white px-10 sm:px-16 py-2 sm:py-3 rounded-md flex items-center gap-2 text-base sm:text-lg hover:scale-105 transition-transform duration-300"
         >
           Download <FaArrowDown />
         </a>
 
         {/* Toolkit Section */}
         <div className="w-full text-center">
-          <h3 className="text-3xl font-bold mb-10 mt-20">Toolkit</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10">Toolkit</h3>
 
-          {/* Toolkit Grid */}
-          <div className="grid grid-cols-3 gap-6 justify-items-center">
-            {[html, css, javascript, mongodb, express, react, node, tailwind, bootstrap, postman, github, vite, photoshop, canva].map((icon, index) => (
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center">
+            {[
+              html, css, javascript, mongodb, express, react, node,
+              tailwind, bootstrap, postman, github, vite, photoshop, canva,
+            ].map((icon, index) => (
               <div
                 key={index}
-                className="group relative cursor-pointer transition-transform duration-300 hover:scale-125 w-24 h-24"
+                className="group relative cursor-pointer transition-transform duration-300 hover:scale-125 w-20 h-20 sm:w-24 sm:h-24"
               >
                 <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
                   <img
                     src={icon}
                     alt="tech"
-                    className="w-16 h-16 object-contain group-hover:opacity-0 transition-opacity duration-200"
+                    className="w-12 h-12 sm:w-16 sm:h-16 object-contain group-hover:opacity-0 transition-opacity duration-200"
                   />
-                  <span className="absolute text-lg text-teal-700 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <span className="absolute text-sm sm:text-base text-teal-700 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     {icon.split("/").pop().split(".")[0].toUpperCase()}
                   </span>
                 </div>
@@ -110,14 +116,19 @@ export default function HireMe() {
             ))}
           </div>
         </div>
-        <div className="mt-20 text-justify space-y-6 text-left text-lg leading-relaxed">
- <p>
- [ <strong>Languages:</strong> HTML, CSS, JavaScript (ES6+), Python (Basics), <strong>Front-End:</strong> React.js, Redux, Tailwind CSS, Bootstrap, <strong>Back-End:</strong> Node.js, Express.js, MVC Architecture, Django (Basics), <strong>Database:</strong> MongoDB, DBMS (Basics), CRUD Operations, <strong>API & Tools:</strong> REST APIs, Axios, JSON, Postman, JWT Authentication, Git, GitHub, <strong>Digital Marketing:</strong> SEO, Meta Ads, Google Ads, Email Marketing, Campaign Strategy, Analytics, Wordpress, CRM, Content Marketing, Funnel Building & Lead Gen, <strong>Others:</strong> Figma, Adobe Photoshop, Canva ]
- </p>
+
+        {/* Language & Skills Summary */}
+        <div className="mt-10 text-left space-y-6 text-base sm:text-lg leading-relaxed px-2 sm:px-4">
+          <p>
+            [ <strong>Languages:</strong> HTML, CSS, JavaScript (ES6+), Python (Basics),
+            <strong> Front-End:</strong> React.js, Redux, Tailwind CSS, Bootstrap,
+            <strong> Back-End:</strong> Node.js, Express.js, MVC Architecture, Django (Basics),
+            <strong> Database:</strong> MongoDB, DBMS (Basics), CRUD Operations,
+            <strong> API & Tools:</strong> REST APIs, Axios, JSON, Postman, JWT Authentication, Git, GitHub,
+            <strong> Digital Marketing:</strong> SEO, Meta Ads, Google Ads, Email Marketing, Campaign Strategy, Analytics, Wordpress, CRM, Content Marketing, Funnel Building & Lead Gen,
+            <strong> Others:</strong> Figma, Adobe Photoshop, Canva ]
+          </p>
         </div>
-
-
-
       </div>
     </section>
   );

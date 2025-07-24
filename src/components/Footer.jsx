@@ -19,7 +19,7 @@ export default function Footer() {
             <a href="mailto:khushianand009@gmail.com" className="hover:text-yellow-400 transition">Email</a>
             <a href="https://www.linkedin.com/in/k7ushi/" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">LinkedIn</a>
             <a href="https://github.com/k7ushi" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">GitHub</a>
-            <a href="/khushi-resume.pdf" className="hover:text-yellow-400 transition">Resume</a>
+            <a href="/Khushi-Anand-Resume.pdf" className="hover:text-yellow-400 transition">Resume</a>
           </div>
           <p className="text-xs text-gray-500 mt-3">&copy; {new Date().getFullYear()} Khushi Anand. All rights reserved.</p>
         </div>
