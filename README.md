@@ -1,12 +1,54 @@
-# React + Vite
+Personal Portfolio – www.khushianand.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal developer portfolio, a fully custom-built site that reflects my skills, work, and creative process. Designed and developed from scratch using the MERN stack, it's my digital home for all things code, design, and dev energy.
 
-Currently, two official plugins are available:
+===
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+About 
 
-## Expanding the ESLint configuration
+This portfolio is more than just a site, it's a statement.  
+A space that brings together who I am, what I build, and how I think.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Every section is handcrafted, with no templates or shortcuts.  
+From smooth UI transitions and responsive layouts to backend logic and dynamic content management, the goal was simple: create something intentional, functional, and aesthetically pleasing.
+
+===
+
+Features
+
+- Full responsive design for all screen sizes
+- Custom-built sections: About, Projects, Blog, Hire Me, Contact
+- Blog page with dynamic categories and post structure
+- Clean routing and reusable components
+- Deployed and optimized for performance + SEO
+- Smooth scroll + framer motion animations
+
+===
+
+Tech Stack
+
+**Frontend:** React.js, Tailwind CSS, Framer Motion, React Router  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB  
+**Other Tools:** Git, GitHub, Postman, Figma
+
+===
+
+Live Site
+
+**[Visit Portfolio → khushianand.com](https://khushianand.com)**
+
+
+Note
+
+This project is constantly evolving as I grow.  
+New features, blogs, and updates will keep rolling out.  
+Wanna collab or got feedback?
+[Let’s connect.](mailto:khushianand009@gmail.com)
+
+===
+
+License
+
+This project is open-source and free to use, but please don’t copy it 1:1.  
+Clone it, learn from it, remix it. Give credit where due and build your own vibe.
