@@ -15,29 +15,6 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URL)
   .then(async () => {
     console.log("MongoDB Connected ✅");
-
-    // 🔥 TEMPORARY TEST BLOG INSERT
-    const blogSchema = new mongoose.Schema({
-      title: String,
-      summary: String,
-      author: String,
-    });
-
-    const Blog = mongoose.model("Blog", blogSchema);
-
-    const existing = await Blog.findOne({ title: "Sample Blog" });
-    if (!existing) {
-      await Blog.create({
-        title: "Sample Blog",
-        summary: "This is a sample blog entry for testing.",
-        author: "Khushi Anand",
-      });
-      console.log("✅ Test blog added!");
-    } else {
-      console.log("⚠️ Sample blog already exists.");
-    }
-
-    // 👉 Remove this after first run
   })
   .catch((err) => console.error("MongoDB Error:", err));
 
