@@ -1,16 +1,18 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import Footer from './Footer'; 
+import Footer from './Footer';
 import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
 
 export default function Layout() {
-  const scrollContainerRef = useRef(null);
+  const wrapperRef = useRef(null);
+  const contentRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const lenis = new Lenis({
-      wrapper: scrollContainerRef.current,
-      content: scrollContainerRef.current,
+      wrapper: wrapperRef.current,
+      content: contentRef.current,
       smooth: true,
       lerp: 0.1,
     });
@@ -27,13 +29,21 @@ export default function Layout() {
     };
   }, []);
 
+  // ✅ Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <div ref={scrollContainerRef} className="font-sans bg-white text-black h-screen overflow-y-auto">
-      <Navbar />
-      <main className="pt-20">
-        <Outlet />
+    <div ref={wrapperRef} className="font-sans bg-white text-black h-screen overflow-y-scroll">
+      <div ref={contentRef} className="min-h-screen">
+        <Navbar />
+        <main className="pt-12 sm:pt-16 md:pt-20">
+
+          <Outlet />
+        </main>
         <Footer />
-      </main>
+      </div>
     </div>
   );
 }

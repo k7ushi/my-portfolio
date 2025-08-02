@@ -12,11 +12,11 @@ export default function About() {
   const imageSet = [img5, img3, img1, img4, img6, img2, img5, img3, img1, img4, img6, img2];
 
   return (
-    <section className="min-h-screen bg-white text-black font-sans px-6 md:px-20 mb-10">
+    <section className="min-h-screen bg-white text-black font-sans px-6 md:px-20 mb-10 mt-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
 
         {/* Left (Text Section) */}
-        <div className="text-left md:col-span-2 space-y-6 text-2xl sm:text-lg md:text-xl leading-relaxed">
+        <div className="text-left md:col-span-2 space-y-6 text-base sm:text-lg md:text-xl leading-relaxed">
           <p>
             I'm a <span className="bg-[#c2b5e2] rounded-md px-1">Full Stack Web Developer</span> with expertise in the MERN stack <span className="bg-yellow-300 rounded-md px-1">(MongoDB, Express.js, React.js, Node.js)</span>, and a surprisingly poetic start. With an academic background in <span className="bg-[#e36a4e] rounded-md px-1">English Literature</span>, my journey into tech wasn't conventional, it was carved from curiosity, persistence, and a desire to tell stories through code.
           </p>
@@ -43,39 +43,46 @@ export default function About() {
         </div>
 
         {/* Right (Vertical Sliders) */}
-        <div className="flex flex-col sm:flex-row gap-2 h-[400px] sm:h-[600px] md:h-[700px] overflow-hidden justify-center items-center">
-          {/* Top-to-bottom slider */}
-          <div className="w-[140px] sm:w-[160px] md:w-[180px] overflow-hidden group">
-            <div className="space-y-2 animate-vertical-scroll-down group-hover:[animation-play-state:paused]">
-              {imageSet.map((img, i) => (
-                <div key={i} className="transition-transform duration-400 hover:scale-125 hover:z-50">
-                  <img
-                    src={img}
-                    alt={`down-${i}`}
-                    className="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover rounded-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom-to-top slider */}
-          <div className="w-[140px] sm:w-[160px] md:w-[180px] overflow-hidden group">
-            <div className="space-y-2 animate-vertical-scroll-up group-hover:[animation-play-state:paused]">
-              {imageSet.map((img, i) => (
-                <div key={i} className="transition-transform duration-400 hover:scale-125 hover:z-50">
-                  <img
-                    src={img}
-                    alt={`up-${i}`}
-                    className="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover rounded-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+<div className="w-full overflow-x-auto">
+  <div className="flex flex-row gap-2 justify-center items-start">
+  {/* Top-to-bottom slider */}
+  <div className="w-[140px] sm:w-[160px] md:w-[180px] h-[700px] overflow-hidden group">
+    <div className="space-y-2 animate-vertical-scroll-down group-hover:[animation-play-state:paused]">
+      {imageSet.map((img, i) => (
+        <div key={i} className="transition-transform duration-400">
+          <img
+            src={img}
+            alt={`down-${i}`}
+            className="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover rounded-lg"
+          />
         </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Bottom-to-top slider */}
+  <div className="w-[140px] sm:w-[160px] md:w-[180px] h-[700px] overflow-hidden group">
+    <div className="space-y-2 animate-vertical-scroll-up group-hover:[animation-play-state:paused]">
+      {imageSet.map((img, i) => (
+        <div key={i} className="transition-transform duration-400">
+          <img
+            src={img}
+            alt={`up-${i}`}
+            className="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover rounded-lg"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+
 
       </div>
+
     </section>
   );
 }

@@ -23,9 +23,9 @@ export default function HireMe() {
     <section className="min-h-screen flex flex-col lg:flex-row items-start justify-between px-4 sm:px-6 md:px-12 lg:px-20 py-10 sm:py-16 bg-white text-black font-sans space-y-16 lg:space-y-0 lg:space-x-12">
       
       {/* Left Text Content */}
-      <div className="w-full lg:w-[60%] space-y-6 text-left text-2xl sm:text-lg md:text-xl leading-relaxed">
+      <div className="w-full lg:w-[60%] space-y-6 text-left text-base sm:text-lg md:text-xl leading-relaxed">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase">
-          Frontend. Backend. All the stack. All the sass.
+          Frontend. Backend. All the stack.
           <br />
           Based in India, working worldwide.
         </h2>
@@ -74,51 +74,52 @@ export default function HireMe() {
       </div>
 
       {/* Right Side – Resume + Toolkit */}
-      <div className="w-full lg:w-[38%] flex flex-col items-center justify-start space-y-10">
+      <div className="w-full lg:w-[38%] flex flex-col items-center justify-start space-y-6">
         {/* Resume Section */}
         <img
           src={resumeImage}
           alt="Resume preview"
-          className="w-32 sm:w-40 md:w-56 object-contain border rounded-md"
+          className="w-64 sm:w-64 md:w-64 object-contain border rounded-md -mb-10"
         />
         <a
           href="/Khushi-Anand-Resume.pdf"
           download
-          className="bg-black text-white px-10 sm:px-16 py-2 sm:py-3 rounded-md flex items-center gap-2 text-base sm:text-lg hover:scale-105 transition-transform duration-300"
+          className="bg-black text-white px-20 sm:px-20 py-3 sm:py-4 rounded-lg flex items-center gap-3 text-lg sm:text-xl hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
         >
           Download <FaArrowDown />
         </a>
 
         {/* Toolkit Section */}
-        <div className="w-full text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10">Toolkit</h3>
+<div className="w-full text-center">
+  <h3 className="text-2xl sm:text-2xl font-bold mb-8 sm:mb-10">Toolkit</h3>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center">
-            {[
-              html, css, javascript, mongodb, express, react, node,
-              tailwind, bootstrap, postman, github, vite, photoshop, canva,
-            ].map((icon, index) => (
-              <div
-                key={index}
-                className="group relative cursor-pointer transition-transform duration-300 hover:scale-125 w-20 h-20 sm:w-24 sm:h-24"
-              >
-                <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
-                  <img
-                    src={icon}
-                    alt="tech"
-                    className="w-12 h-12 sm:w-16 sm:h-16 object-contain group-hover:opacity-0 transition-opacity duration-200"
-                  />
-                  <span className="absolute text-sm sm:text-base text-teal-700 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    {icon.split("/").pop().split(".")[0].toUpperCase()}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+  <div className="grid grid-cols-5 md:grid-cols-3 gap-4 justify-items-center">
+    {[
+      html, css, javascript, mongodb, express, react, node,
+      tailwind, bootstrap, postman, github, vite, photoshop, canva,
+    ].map((icon, index) => (
+      <div
+        key={index}
+        className="group relative cursor-pointer transition-transform duration-300 hover:scale-110 w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24"
+      >
+        <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
+          <img
+            src={icon}
+            alt="tech"
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 object-contain group-hover:opacity-0 transition-opacity duration-200"
+          />
+          <span className="absolute text-[10px] sm:text-[10px] md:text-[16px] text-teal-700 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            {icon.split("/").pop().split(".")[0].toUpperCase()}
+          </span>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* Language & Skills Summary */}
-        <div className="mt-10 text-left space-y-6 text-base sm:text-lg leading-relaxed px-2 sm:px-4">
+        <div className=" text-left space-y-6 text-base sm:text-lg leading-relaxed px-2 sm:px-4">
           <p>
             [ <strong>Languages:</strong> HTML, CSS, JavaScript (ES6+), Python (Basics),
             <strong> Front-End:</strong> React.js, Redux, Tailwind CSS, Bootstrap,

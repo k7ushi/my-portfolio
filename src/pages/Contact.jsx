@@ -7,11 +7,11 @@ import img3 from "../assets/3.jpg";
 
 export default function Contact() {
   return (
-    <section className="py-12 sm:py-10 bg-white text-black font-sans px-2 sm:px-2 md:px-20 mb-0">
+    <section className="mt-10 md:mt-0 py-0 sm:py-10 bg-white text-black font-sans px-2 sm:px-2 md:px-36">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
         {/* Left Contact Info */}
-        <div className="md:col-span-2 space-y-6 sm:space-y-8 text-2xl sm:text-lg md:text-2xl leading-relaxed text-left">
+        <div className="md:col-span-2 space-y-6 sm:space-y-8 text-base sm:text-lg md:text-2xl leading-relaxed text-left">
           <p>
             Reach out anytime, I’m quick to respond and always down to talk ideas, collabs, or new opportunities.
           </p>
@@ -62,7 +62,7 @@ export default function Contact() {
         <div className="relative flex items-center justify-center md:justify-end min-h-[300px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[600px]">
 
           {/* Floating image 2 - middle-right */}
-          <div className="absolute top-[30px] sm:top-[20px] left-[180px] sm:left-[220px] md:left-[290px] w-24 sm:w-32 md:w-40 h-24 sm:h-32 md:h-40 animate-drift2 z-0">
+          <div className="hidden sm:block absolute top-[30px] sm:top-[20px] left-[180px] sm:left-[220px] md:left-[290px] w-24 sm:w-32 md:w-40 h-24 sm:h-32 md:h-40 animate-drift2 z-0">
             <div className="relative w-full h-full">
               <img
                 src={img7}
@@ -74,7 +74,7 @@ export default function Contact() {
           </div>
 
           {/* Floating image 3 - top-center */}
-          <div className="absolute -top-[30px] sm:-top-[40px] left-[60px] sm:left-[100px] md:left-[130px] w-20 sm:w-28 md:w-36 h-20 sm:h-28 md:h-36 animate-drift3 z-0">
+          <div className="hidden sm:block  absolute -top-[30px] sm:-top-[40px] left-[60px] sm:left-[100px] md:left-[130px] w-20 sm:w-28 md:w-36 h-20 sm:h-28 md:h-36 animate-drift3 z-0">
             <div className="relative w-full h-full">
               <img
                 src={img3}
@@ -86,7 +86,7 @@ export default function Contact() {
           </div>
 
           {/* Main profile image */}
-          <div className="relative w-36 sm:w-44 md:w-52 h-36 sm:h-44 md:h-52 z-10">
+          <div className="relative w-52 sm:w-44 md:w-52 h-52 sm:h-44 md:h-52 z-10">
             <img
               src={redprofile}
               alt="Khushi Anand"

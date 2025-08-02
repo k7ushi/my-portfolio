@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="w-full px-6 py-10 bg-black backdrop-blur-xl text-white">
+    <footer className="w-full px-6 py-10 bg-black backdrop-blur-xl text-white pb-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         
         {/* Left Section */}
@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col items-start md:items-end space-y-2 text-sm">
+        <div className="flex  flex-col items-start md:items-end space-y-2 text-sm">
           <div className="flex gap-5">
             <a href="mailto:khushianand009@gmail.com" className="hover:text-yellow-400 transition">Email</a>
             <a href="https://www.linkedin.com/in/k7ushi/" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition">LinkedIn</a>

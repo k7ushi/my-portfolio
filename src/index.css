@@ -1,15 +1,14 @@
 html,
 body {
-  height: auto;
+  height: 100%;
   width: 100%;
   overflow-x: hidden;
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 #root {
   min-height: 100vh;
   width: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -19,6 +18,13 @@ body {
 *:focus {
   outline: none;
   box-shadow: none;
+}
+
+
+.lenis-wrapper {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #f3f4f6;
 }
 
 .clamp-2 {
@@ -72,9 +78,6 @@ body {
   animation: vertical-scroll-down 40s linear infinite;
 }
 
-
-
-
 @keyframes drift1 {
   0%, 100% {
     transform: translate(-4px, -2px) scale(1);
@@ -102,7 +105,6 @@ body {
   }
 }
 
-
 .animate-drift1 {
   animation: drift1 2s ease-in-out infinite;
 }
@@ -112,4 +114,3 @@ body {
 .animate-drift3 {
   animation: drift3 2s ease-in-out infinite;
 }
-

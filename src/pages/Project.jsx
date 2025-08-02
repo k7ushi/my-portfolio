@@ -11,8 +11,8 @@ import tailwind from "../assets/tailwind.jpg";
 
 export default function Projects() {
   return (
-    <section className="min-h-screen px-6 md:px-20 mb-10 text-black bg-white font-sans space-y-24">
-      <h1 className="text-5xl font-bold mb-10 text-left">Projects</h1>
+    <section className="min-h-screen px-6 md:px-20 mb-10 text-black bg-white font-sans space-y-12 sm:space-y-16 md:space-y-24">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-left">Projects</h1>
 
       {/* Project 1 – UBER Clone */}
       <div className="flex flex-col md:flex-row items-start gap-10">
@@ -24,8 +24,8 @@ export default function Projects() {
           />
         </div>
         <div className="flex-1 space-y-4">
-          <h2 className="text-3xl font-bold">UBER Clone</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-lg text-gray-700">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">UBER Clone</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-base sm:text-lg text-gray-700">
             <p>Ride booking application exactly like UBER with user and captain panels. Includes ride request and live ride status.<br></br><br></br>
               Although it still misses a few features like updating the captain’s dashboard with hours online, total fare collected, etc., and real-time path tracking between pickup and drop locations.
               <div>
@@ -73,8 +73,8 @@ export default function Projects() {
           />
         </div>
         <div className="flex-1 space-y-4">
-          <h2 className="text-3xl font-bold">Social Media Platform</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-lg text-gray-700">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Social Media Platform</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-base sm:text-lg text-gray-700">
             <p>
               Real-time chat, video calling, and 32 unique UI themes. JWT-based
               authentication and protected routes.<br></br><br></br>
@@ -126,8 +126,8 @@ export default function Projects() {
           />
         </div>
         <div className="flex-1 space-y-4">
-          <h2 className="text-3xl font-bold">Expense Tracker</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-lg text-gray-700">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Expense Tracker</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-base sm:text-lg text-gray-700">
             <p>
               Responsive finance tracker with user login, real-time dashboards,
               Excel report downloads.<br></br><br></br>

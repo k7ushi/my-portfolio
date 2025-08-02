@@ -46,32 +46,34 @@ const Home = () => {
 
   return (
     <section className="min-h-screen bg-white text-black font-sans px-4 sm:px-6 md:px-20 pb-20">
+
       {/* Hero Section */}
+
 <div className="flex flex-col md:flex-row items-center justify-between relative z-10 gap-10 mb-16">
   {/* Left Text Section */}
   <div className="md:w-1/2 w-full text-center md:text-left">
-    <h1 className="text-[12vw] md:text-[7vw] lg:text-[5vw] font-bold leading-none whitespace-nowrap">
-      Hi, <br /> I'm Khushi <span className="relative z-20">Anand</span>
-    </h1>
-    <p className="mt-6 ml-5 text-xl sm:text-2xl md:text-4xl">
-      <Typewriter
-        options={{
-          strings: [
-            'Full Stack Developer',
-            'Digital Marketing Strategist',
-            'Writer at heart...',
-          ],
-          autoStart: true,
-          loop: true,
-          wrapperClassName: 'font-semibold',
-          cursorClassName: 'animate-blink',
-        }}
-      />
-      <br />
-      I live <span className="line-through">at the computer</span>
-      <br />
-      in New Delhi, India
-    </p>
+    <h1 className="text-[10vw] sm:text-[8vw] md:text-[10vw] lg:text-[6vw] font-bold leading-tight sm:leading-none whitespace-normal sm:whitespace-nowrap">
+  Hi, <br /> I'm Khushi <span className="relative z-20">Anand</span>
+</h1>
+    <p className="mt-4 sm:mt-6 text-base sm:text-xl md:text-4xl leading-relaxed sm:leading-snug px-4 sm:px-0">
+  <Typewriter
+    options={{
+      strings: [
+        'Full Stack Developer',
+        'Digital Marketing Strategist',
+        'Writer at heart...',
+      ],
+      autoStart: true,
+      loop: true,
+      wrapperClassName: 'font-semibold',
+      cursorClassName: 'animate-blink',
+    }}
+  />
+  <br />
+  I live <span className="line-through">at the computer</span>
+  <br />
+  in New Delhi, India
+</p>
   </div>
 
   {/* Right Image Section */}
@@ -160,10 +162,13 @@ const Home = () => {
 
 
 
-      <div className="mt-0">
-        <h2 className="text-5xl font-bold pl-20 text-left mb-12">
-          RECENT WORK
-        </h2>
+      <div className="md:mt-0 mt-5">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pl-5 md:pl-20 text-left mb-12">
+  RECENT WORK
+</h2>
+
+
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           <div className="border rounded-lg overflow-hidden shadow-md flex flex-col items-center p-4">
             <img src={uber} alt="Work 1" className="w-full h-50  rounded" />
@@ -317,14 +322,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-right mt-10 text-3xl pr-10 font-bold mb-20">
+      <div className="text-right mt-10 text-3xl pr-10 font-bold mb-10 md:mb-20">
         <Link to="/projects" className="">
           Other Builds <span className="text-3xl">&raquo;&raquo;&raquo;</span>
         </Link>
       </div>
 
-      <div className="mt-0">
-        <h2 className="text-5xl font-bold pl-20 text-left mb-12">
+      <div className="md:mt-0">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pl-5 md:pl-20 text-left mb-12">
           BLOG & BYTES
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"></div>
@@ -360,14 +365,14 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="text-right mt-1 text-3xl pr-10 font-bold mb-20">
+      <div className="text-right md:mt-0 mt-10 text-3xl pr-10 font-bold md:mb-20 mb-10">
         <h3 className="text-3xl font-bold">
           Keep Reading <span className="text-3xl">»»»</span>
         </h3>
       </div>
 
 
-  <h2 className="text-5xl font-bold pl-20 text-left mb-12">PORTFOLIO</h2>
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pl-5 md:pl-20 text-left mb-12">PORTFOLIO</h2>
   
 
 
@@ -378,7 +383,7 @@ const Home = () => {
 
 
     {/* Left - About */}
-    <div className="text-left px-4 max-w-4xl text-2xl leading-relaxed space-y-6">
+    <div className="text-left px-4 sm:px-6 md:px-2 max-w-4xl text-base sm:text-lg md:text-xl leading-relaxed space-y-6">
       <p>I’ve been <span className="bg-[#c2b5e2] rounded-md px-1">building, learning, & delivering work</span> for years now,<br />
       from creating CMS websites to designing and developing everything<br />
       from scratch. Over the <span className="bg-yellow-300 rounded-md px-1">last 5 years</span>, I’ve grown into a developer<br />
@@ -427,10 +432,10 @@ const Home = () => {
   </div>
 
 {/* Toolkit Section */}
-<div className="mt-7 flex flex-col md:flex-row items-start justify-between gap-12 px-10">
+<div className="mt-7 flex flex-col md:flex-row items-start justify-between gap-12 px-4">
   {/* Left Text */}
-  <div className="md:w-1/2 text-left space-y-6">
-    <p className="text-2xl leading-relaxed">
+  <div className="w-full md:w-1/2 text-left space-y-6 px-4 sm:px-4">
+    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
       I'm open to work currently,<br />
       freelance gigs, internships, part-time opportunities,<br />
       remote/cross-timezone, full-time position.
@@ -438,12 +443,12 @@ const Home = () => {
 
     {/* Subheadings */}
     <div className="space-y-4">
-      <h3 className="text-2xl font-bold">• Full Stack (MERN, Frontend + Backend)</h3>
-      <h3 className="text-2xl font-bold">• Custom CMS & dashboard tools</h3>
-      <h3 className="text-2xl font-bold">• Project bug fixing & optimization</h3>
-      <h3 className="text-2xl font-bold">• Shopify + WooCommerce Websites</h3>
-      <h3 className="text-2xl font-bold">• Figma to code conversions</h3>
-      <h3 className="text-2xl font-bold">• Advanced Digital Marketing</h3>
+      <h3 className="text-base sm:text-lg md:text-xl font-bold">• Full Stack (MERN, Frontend + Backend)</h3>
+      <h3 className="text-base sm:text-lg md:text-xl font-bold">• Custom CMS & dashboard tools</h3>
+      <h3 className="text-base sm:text-lg md:text-xl font-bold">• Project bug fixing & optimization</h3>
+      <h3 className="text-base sm:text-lg md:text-xl font-bold">• Shopify + WooCommerce Websites</h3>
+      <h3 className="text-base sm:text-lg md:text-xl font-bold">• Figma to code conversions</h3>
+      <h3 className="text-base sm:text-lg md:text-xl font-bold">• Advanced Digital Marketing</h3>
     </div>
 
     {/* Resume Button */}
@@ -596,7 +601,7 @@ const Home = () => {
 
 <div className="block md:hidden">
   <h3 className="text-2xl font-bold mb-6 text-center">Toolkit</h3>
-  <div className="grid grid-cols-3 gap-4 justify-items-center">
+  <div className="grid grid-cols-5 gap-4 justify-items-center">
     {[
       { src: html, label: "HTML" },
       { src: css, label: "CSS" },
@@ -613,14 +618,14 @@ const Home = () => {
       { src: photoshop, label: "Photoshop" },
       { src: canva, label: "Canva" },
     ].map((tool, index) => (
-      <div key={index} className="group relative cursor-pointer transition-transform duration-300 hover:scale-110 w-20 h-20">
+      <div key={index} className="group relative cursor-pointer transition-transform duration-300 hover:scale-110 w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24">
         <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
           <img
             src={tool.src}
             alt={tool.label}
-            className="w-12 h-12 object-contain group-hover:opacity-0 transition-opacity duration-200"
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 object-contain group-hover:opacity-0 transition-opacity duration-200"
           />
-          <span className="absolute text-sm text-teal-700 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <span className="absolute text-[10px] sm:text-[10px] md:text-[16px] text-teal-700 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             {tool.label}
           </span>
         </div>
@@ -633,7 +638,8 @@ const Home = () => {
 </div>
 
 {/* Contact Info */}
-<div className="mt-10 flex flex-col sm:flex-row justify-between text-2xl gap-6 sm:gap-0 text-gray-800 font-medium">
+<div className="mt-10 flex flex-col sm:flex-row sm:justify-between text-base sm:text-lg md:text-xl gap-2 sm:gap-6 text-gray-800 font-medium px-4 sm:px-0 text-center sm:text-left">
+
 
   {/* Email with copy on click */}
   <button onClick={() => {
@@ -662,7 +668,7 @@ const Home = () => {
     {[img5, img3, img1, img4, img6, img2, img5, img3, img1, img4, img6, img2].map((img, i) => (
       <div
         key={i}
-        className="flex-shrink-0 transition-transform duration-300 hover:scale-125 hover:z-50"
+        className="flex-shrink-0 transition-transform duration-300"
       >
         <img
           src={img}
