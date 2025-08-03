@@ -18,6 +18,25 @@ import canva from "../assets/canva.jpg";
 
 import { FaArrowDown } from "react-icons/fa";
 
+
+const techStack = [
+  { icon: html, label: "HTML" },
+  { icon: css, label: "CSS" },
+  { icon: javascript, label: "JavaScript" },
+  { icon: mongodb, label: "MongoDB" },
+  { icon: express, label: "Express" },
+  { icon: react, label: "React" },
+  { icon: node, label: "Node.js" },
+  { icon: tailwind, label: "Tailwind" },
+  { icon: bootstrap, label: "Bootstrap" },
+  { icon: postman, label: "Postman" },
+  { icon: github, label: "GitHub" },
+  { icon: vite, label: "Vite" },
+  { icon: photoshop, label: "Photoshop" },
+  { icon: canva, label: "Canva" },
+];
+
+
 export default function HireMe() {
   return (
     <section className="min-h-screen flex flex-col lg:flex-row items-start justify-between px-4 sm:px-6 md:px-12 lg:px-20 py-10 sm:py-16 bg-white text-black font-sans space-y-16 lg:space-y-0 lg:space-x-12">
@@ -74,7 +93,7 @@ export default function HireMe() {
       </div>
 
       {/* Right Side – Resume + Toolkit */}
-      <div className="w-full lg:w-[38%] flex flex-col items-center justify-start space-y-6">
+      <div className="w-full lg:w-[38%] flex flex-col items-center justify-start space-y-6 text-center lg:text-left">
         {/* Resume Section */}
         <img
           src={resumeImage}
@@ -93,28 +112,27 @@ export default function HireMe() {
 <div className="w-full text-center">
   <h3 className="text-2xl sm:text-2xl font-bold mb-8 sm:mb-10">Toolkit</h3>
 
-  <div className="grid grid-cols-5 md:grid-cols-3 gap-4 justify-items-center">
-    {[
-      html, css, javascript, mongodb, express, react, node,
-      tailwind, bootstrap, postman, github, vite, photoshop, canva,
-    ].map((icon, index) => (
-      <div
-        key={index}
-        className="group relative cursor-pointer transition-transform duration-300 hover:scale-110 w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24"
-      >
-        <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
-          <img
-            src={icon}
-            alt="tech"
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 object-contain group-hover:opacity-0 transition-opacity duration-200"
-          />
-          <span className="absolute text-[10px] sm:text-[10px] md:text-[16px] text-teal-700 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            {icon.split("/").pop().split(".")[0].toUpperCase()}
-          </span>
-        </div>
+ <div className="grid grid-cols-5 md:grid-cols-3 gap-4 justify-items-center">
+  {techStack.map((tech, index) => (
+    <div
+      key={index}
+      className="group relative cursor-pointer transition-transform duration-300 hover:scale-110 w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24"
+    >
+      <div className="w-full h-full border-2 border-teal-500 rounded-full flex items-center justify-center overflow-hidden relative">
+        <img
+          src={tech.icon}
+          alt={tech.label}
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 object-contain group-hover:opacity-0 transition-opacity duration-200"
+        />
+        <span className="absolute text-[10px] sm:text-[10px] md:text-[16px] text-teal-700 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          {tech.label}
+        </span>
       </div>
-    ))}
-  </div>
+    </div>
+  ))}
+</div>
+
+
 </div>
 
 
