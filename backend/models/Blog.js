@@ -6,7 +6,7 @@ const blogSchema = new mongoose.Schema({
   content: { type: String, required: true },
   author: String,
   createdAt: { type: Date, default: Date.now },
-  customDate: Date, // <-- add this line
+  customDate: Date,
   coverImage: String,
 });
 
