@@ -17,14 +17,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="projects" element={<Project />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="hire-me" element={<HireMe />} />
-          <Route path="/blogs/:id" element={<BlogDetail />} />
+        <Route path="/" element={<Layout></Layout>}>
+          <Route index element={<Home></Home>}></Route>
+          <Route path="projects" element={<Project></Project>}></Route>
+          <Route path="about" element={<About></About>}></Route>
+          <Route path="contact" element={<Contact></Contact>}></Route>
+          <Route path="blogs" element={<Blogs></Blogs>}></Route>
+          <Route path="hire-me" element={<HireMe></HireMe>}></Route>
+          <Route path="/blogs/:id" element={<BlogDetail></BlogDetail>}></Route>
         </Route>
       </Routes>
     </Router>

@@ -58,10 +58,10 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Profile Image and Floating Bubbles */}
+        {/* Right */}
         <div className="relative flex items-center justify-center md:justify-end min-h-[300px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[600px]">
 
-          {/* Floating image 2 - middle-right */}
+          {/* Floating img1 */}
           <div className="hidden sm:block absolute top-[30px] sm:top-[20px] left-[180px] sm:left-[220px] md:left-[290px] w-24 sm:w-32 md:w-40 h-24 sm:h-32 md:h-40 animate-drift2 z-0">
             <div className="relative w-full h-full">
               <img
@@ -73,7 +73,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Floating image 3 - top-center */}
+          {/* Floating img2 */}
           <div className="hidden sm:block  absolute -top-[30px] sm:-top-[40px] left-[60px] sm:left-[100px] md:left-[130px] w-20 sm:w-28 md:w-36 h-20 sm:h-28 md:h-36 animate-drift3 z-0">
             <div className="relative w-full h-full">
               <img

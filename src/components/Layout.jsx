@@ -29,7 +29,6 @@ export default function Layout() {
     };
   }, []);
 
-  // ✅ Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
@@ -37,13 +36,13 @@ export default function Layout() {
   return (
     <div ref={wrapperRef} className="font-sans bg-white text-black h-screen overflow-y-scroll">
       <div ref={contentRef} className="min-h-screen">
-        <Navbar />
+        <Navbar></Navbar>
         <main className="pt-12 sm:pt-16 md:pt-20">
-
-          <Outlet />
+          <Outlet></Outlet>
         </main>
-        <Footer />
+        <Footer></Footer>
       </div>
     </div>
+    
   );
 }
